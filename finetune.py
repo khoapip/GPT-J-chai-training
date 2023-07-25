@@ -295,7 +295,7 @@ from prompt import make_prompt
 def generate_prompt(data_point):
     question = data_point["prompt"].strip()
     answer = data_point["response"].strip()
-    return f"{make_prompt(question)}\n{answer}"
+    return f"{question}{answer}"
 
 if __name__ == "__main__":
     fire.Fire(train)
